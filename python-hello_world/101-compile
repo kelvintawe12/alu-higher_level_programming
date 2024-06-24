@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+import os
+import sys
+
+def compile_python_script():
+    # Read the value of the environment variable $PYFILE
+    pyfile = os.environ.get("PYFILE")
+    if not pyfile:
+        print("Error: Environment variable PYFILE is not set.")
+        sys.exit(1)
+
+    # Compile the Python script
+    try:
+        compiled_code = compile(open(pyfile).read(), pyfile, "exec")
+    except FileNotFoundError:
+        print(f"Error: File '{pyfile}' not found.")
+        sys.exit(1)
+
+    # Write the compiled code to a .pyc file
+    compiled_filename = pyfile + "c"
+    with open(compiled_filename, "wb") as compiled_file:
+        compiled_file.write(compiled_code.co_code)
+
+    print(f"Compiling {pyfile} ...")
+    print(f"Output filename: {compiled_filename}")
+
+if __name__ == "__main__":
+    compile_python_script()
