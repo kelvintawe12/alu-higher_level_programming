@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This i the shell script to run the python script.
+PYFILE="main.py"
+
+# Execute the Python script
+python3 "$PYFILE"
+
