@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This i the shell script to run the python script.
 PYFILE="main.py"
 
