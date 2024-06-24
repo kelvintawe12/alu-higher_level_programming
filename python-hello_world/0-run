@@ -1,5 +1,5 @@
 #!/bin/bash
-# This i the shell script to run the python script.
+# This is the shell script to run the python script.
 PYFILE="main.py"
 
 # Execute the Python script
