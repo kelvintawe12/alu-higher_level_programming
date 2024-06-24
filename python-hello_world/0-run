@@ -1,7 +1,8 @@
 #!/bin/bash
-# This is the shell script to run the python script.
-PYFILE="main.py"
 
-# Execute the Python script
+# Set the Python file name
+export PYFILE="main.py"
+
+# Run the Python script
 python3 "$PYFILE"
 

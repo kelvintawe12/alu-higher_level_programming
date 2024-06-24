@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("python for  beginners 2024 january intake. ")
+# main.py and printing the text best schol .
+print("Best School")
