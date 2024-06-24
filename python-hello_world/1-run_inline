@@ -1,2 +1,3 @@
 #!/bin/bash
-export PYCODE="$(python3 -c 'print(f"Best School: {88+10}")
+export PYCODE='print(f"Best School: {88+10}")'
+python -c "$PYCODE"
