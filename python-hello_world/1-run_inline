@@ -1,8 +1,0 @@
-#!/bin/bash
-#This the run_python_inline.sh shell script .
-
-# Setting the python code.
-PYCODE='print(f"Best School: {88+10}")'
-
-# Execute the Python code
-python3 -c "$PYCODE"

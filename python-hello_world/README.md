@@ -1,2 +1,3 @@
-#This si a readme .md file for python
-learning the basics of python and data structure 
+# My Awesome Project
+A simple Python script that prints "Best School."
+

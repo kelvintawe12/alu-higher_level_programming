@@ -1,8 +1,3 @@
 #!/bin/bash
-
-# Set the Python file name
-export PYFILE="main.py"
-
-# Run the Python script
-python3 "$PYFILE"
+python3 main.py
 
