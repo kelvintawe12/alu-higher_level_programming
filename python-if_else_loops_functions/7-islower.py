@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 
-def islower(c):
+def get_unicode_code_point(c):
     """
-    Returns True if c is lowercase, False otherwise.
+    Returns the Unicode code point of the given character.
     """
-    return ord('a') <= ord(c) <= ord('z')
+    return ord(c)
 
-# Example usage
-print(islower("a"))  # True
-print(islower("H"))  # False
-print(islower("A"))  # False
-print(islower("3"))  # False
-print(islower("g"))  # True
+# Example usage:
+print(get_unicode_code_point('a'))  
+print(get_unicode_code_point('\u2020'))
