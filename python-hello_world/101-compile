@@ -1,21 +1,24 @@
-#!/usr/bin/python3
-
-
+#!/usr/bin/env python3
 import os
+import subprocess
 import sys
 
-def compile_python_file(pyfile):
-    try:
-        compiled_filename = pyfile + "c"
-        os.system(f"python -m py_compile {pyfile}")
-        print(f"Compiled {pyfile} successfully. Output filename: {compiled_filename}")
-    except Exception as e:
-        print(f"Error compiling {pyfile}: {e}")
-
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python compile_script.py <python_file.py>")
+def compile_python_script():
+    # Get the Python file name from the environment variable
+    pyfile = os.getenv("PYFILE")
+    if not pyfile:
+        print("Error: Environment variable PYFILE is not set.")
         sys.exit(1)
 
-    pyfile = sys.argv[1]
-    compile_python_file(pyfile)
+    # Compile the Python script
+    output_filename = f"{pyfile}c"
+    try:
+        subprocess.run(["python3", "-m", "py_compile", pyfile], check=True)
+        print(f"Compiling {pyfile} ...")
+        print(f"Output filename: {output_filename}")
+    except subprocess.CalledProcessError:
+        print(f"Error: Failed to compile {pyfile}.")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    compile_python_script()
