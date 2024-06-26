@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 #adding two variables
 add = __import__('10-add').add
 
