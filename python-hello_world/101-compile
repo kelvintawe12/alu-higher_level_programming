@@ -1,24 +1,18 @@
 #!/bin/bash
-import os
-import subprocess
-import sys
 
-def compile_python_script():
-    # Get the Python file name from the environment variable
-    pyfile = os.getenv("PYFILE")
-    if not pyfile:
-        print("Error: Environment variable PYFILE is not set.")
-        sys.exit(1)
+# Get the Python file name from the environment variable
+pyfile="$PYFILE"
+if [ -z "$pyfile" ]; then
+    echo "Error: Environment variable PYFILE is not set."
+    exit 1
+fi
 
-    # Compile the Python script
-    output_filename = f"{pyfile}c"
-    try:
-        subprocess.run(["python3", "-m", "py_compile", pyfile], check=True)
-        print(f"Compiling {pyfile} ...")
-        print(f"Output filename: {output_filename}")
-    except subprocess.CalledProcessError:
-        print(f"Error: Failed to compile {pyfile}.")
-        sys.exit(1)
-
-if __name__ == "__main__":
-    compile_python_script()
+# Compile the Python script
+output_filename="${pyfile}c"
+if python3 -m py_compile "$pyfile"; then
+    echo "Compiling $pyfile ..."
+    echo "Output filename: $output_filename"
+else
+    echo "Error: Failed to compile $pyfile."
+    exit 1
+fi
