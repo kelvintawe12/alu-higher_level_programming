@@ -1,18 +1,16 @@
 #!/bin/bash
 
 # Get the Python file name from the environment variable
-pyfile="$PYFILE"
-if [ -z "$pyfile" ]; then
-    echo "Error: Environment variable PYFILE is not set."
-    exit 1
-fi
+PYFILE="$PYFILE"
 
 # Compile the Python script
-output_filename="${pyfile}c"
-if python3 -m py_compile "$pyfile"; then
-    echo "Compiling $pyfile ..."
-    echo "Output filename: $output_filename"
-else
-    echo "Error: Failed to compile $pyfile."
-    exit 1
-fi
+python3 -m py_compile "$PYFILE"
+
+# Create the output filename
+OUTPUT_FILENAME="${PYFILE}c"
+
+# Print a message indicating successful compilation
+echo "Compiling $PYFILE ..."
+
+# List the files in the directory to verify the output
+ls -l
