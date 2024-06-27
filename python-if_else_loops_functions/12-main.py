@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
+
 def fizzbuzz(n):
+    result = ""
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+            result += "FizzBuzz "
         elif i % 3 == 0:
-            print("Fizz")
+            result += "Fizz "
         elif i % 5 == 0:
-            print("Buzz")
+            result += "Buzz "
         else:
-            print(i)
+            result += str(i) + " "
+    print(result.strip())
 
+if __name__ == "__main__":
+    fizzbuzz(100)
