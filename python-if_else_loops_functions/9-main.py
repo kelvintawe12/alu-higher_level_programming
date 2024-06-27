@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
-def custom_add(a, b):
-    return a + b
+def custom_concatenate_last_digits(*args):
+    string = ''
+    for each in args:
+        string += str(each)
+    return int(string)
 
-custom_add(1, 2)
-custom_add(98, 0)
-custom_add(100, -2)
+result = custom_concatenate_last_digits(98, 0, -1024)
+print(result)
