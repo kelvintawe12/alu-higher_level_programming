@@ -1,16 +1,8 @@
-#!/bin/bash
+#!/usr/bin/python3
+import py_compile
+import os
 
-# Get the Python file name from the environment variable
-PYFILE="$PYFILE"
+pyfile = os.environ.get('PYFILE')
+py_compile.compile(pyfile, cfile=f"{pyfile}c")
 
-# Compile the Python script
-python3 -m py_compile "$PYFILE"
-
-# Create the output filename
-OUTPUT_FILENAME="${PYFILE}c"
-
-# Print a message indicating successful compilation
-echo "Compiling $PYFILE ..."
-
-# List the files in the directory to verify the output
-ls -l
+print(f"Compiling {pyfile} ...")
