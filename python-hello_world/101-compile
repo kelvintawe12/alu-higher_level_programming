@@ -1,6 +1,8 @@
 #!/bin/bash
 
+
 PYFILE="$PYFILE"
 python3 -m py_compile "$PYFILE"
 OUTPUT_FILENAME="${PYFILE%.py}c"
 echo "$OUTPUT_FILENAME"
+
