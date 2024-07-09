@@ -15,7 +15,7 @@ class Square:
 
         Args:
             size (int): The size of the new square. Default is 0.
-            position (tuple): The position of the new square. Default is (0, 0).
+            position (tuple): The position of the new square. Default (0, 0).
 
         Raises:
             TypeError: If size is not an integer or position is not a tuple
