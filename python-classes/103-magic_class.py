@@ -40,10 +40,3 @@ class MagicClass:
             float: The circumference of the circle.
         """
         return 2 * math.pi * self.__radius
-
-
-# Example usage
-if __name__ == "__main__":
-    mc = MagicClass(5)
-    print("Area:", mc.area())
-    print("Circumference:", mc.circumference())

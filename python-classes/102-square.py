@@ -63,22 +63,3 @@ class Square:
     def __ge__(self, other):
         """Check if one square is greater than or equal to another based on their area."""
         return self.area() >= other.area()
-
-
-# Example usage
-if __name__ == "__main__":
-    s_5 = Square(5)
-    s_6 = Square(6)
-
-    if s_5 < s_6:
-        print("Square 5 < Square 6")
-    if s_5 <= s_6:
-        print("Square 5 <= Square 6")
-    if s_5 == s_6:
-        print("Square 5 == Square 6")
-    if s_5 != s_6:
-        print("Square 5 != Square 6")
-    if s_5 > s_6:
-        print("Square 5 > Square 6")
-    if s_5 >= s_6:
-        print("Square 5 >= Square 6")

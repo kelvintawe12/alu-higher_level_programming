@@ -84,13 +84,3 @@ class Square:
         for _ in range(self._size):
             result += " " * self._position[0] + "#" * self._size + "\n"
         return result.rstrip()
-
-# Example usage
-if __name__ == "__main__":
-    my_square = Square(5, (0, 0))
-    print(my_square)
-
-    print("--")
-
-    my_square = Square(5, (4, 1))
-    print(my_square)
