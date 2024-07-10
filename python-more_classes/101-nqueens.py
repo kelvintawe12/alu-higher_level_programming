@@ -36,7 +36,7 @@ def solve_nqueens(N):
 
 def main():
     if len(sys.argv) != 2:
-        print_usage()    
+        print_usage()
     try:
         N = int(sys.argv[1])
     except ValueError:
