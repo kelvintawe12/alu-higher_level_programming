@@ -5,7 +5,7 @@ for width and height, including property getters and setters, public instance
 to calculate the area and perimeter of the rectangle, __str__ and __repr__ m.
 and a message printed when an instance of Rectangle is deleted.
 It also includes public class attributes to keep track of the number of instan
-the symbol used for string representation, a static method to compare rectangles by area.
+the symbol used for string representation, a static method to compare recta.
 and a class method to create a square.
 """
 
