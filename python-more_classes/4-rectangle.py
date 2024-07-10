@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 This module defines a Rectangle class with private instance attributes
-for width and height, including property getters and setters, public instance methods
-to calculate the area and perimeter of the rectangle, and __str__ and __repr__ methods.
+for width and height, including property getters and setters, public instance
+to calculate the area and perimeter of the rectangle, 
 """
 
 
@@ -53,7 +53,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle with the character '#'."""
+        """Returns a string representation of the rectangle with thr '#'."""
         if self.__width == 0 or self.__height == 0:
             return ""
         rect = ""
@@ -62,5 +62,5 @@ class Rectangle:
         return rect.rstrip()
 
     def __repr__(self):
-        """Returns a string representation of the rectangle for reproduction with eval()."""
+        """Returns a string representation of  eval()."""
         return f"Rectangle({self.__width}, {self.__height})"

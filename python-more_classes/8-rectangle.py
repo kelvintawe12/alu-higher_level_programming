@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 """
 This module defines a Rectangle class with private instance attributes
-for width and height, including property getters and setters, public instance methods
-to calculate the area and perimeter of the rectangle, __str__ and __repr__ methods,
+for width and height, including property getters and setters, public instanc
+to calculate the area and perimeter of the rectangle, __str__ and __repr__ m.
 and a message printed when an instance of Rectangle is deleted.
-It also includes public class attributes to keep track of the number of instances and 
-the symbol used for string representation, and a static method to compare rectangles by area.
+It also includes public class attributes to keep track of the number .
+the symbol used for string representation, and a static method to compare.
 """
 
 
 class Rectangle:
     """Represents a rectangle."""
-    
     number_of_instances = 0
     print_symbol = "#"
 
@@ -60,7 +59,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle with the character in print_symbol."""
+        """Returns a string representation of the rectangle with the."""
         if self.__width == 0 or self.__height == 0:
             return ""
         rect = ""
@@ -69,11 +68,11 @@ class Rectangle:
         return rect.rstrip()
 
     def __repr__(self):
-        """Returns a string representation of the rectangle for reproduction with eval()."""
+        """Returns a string representation of the rectangle feval()."""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Prints a message when an instance of Rectangle is deleted and decrements the instance count."""
+        """Prints a message when an instance of Rectangle is dinsta count."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
