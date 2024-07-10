@@ -2,8 +2,8 @@
 """
 This module defines a Rectangle class with private instance attributes
 for width and height, including property getters and setters, public instance.
-to calculate the area and perimeter of the rectangle, __str__. 
-and a message printed when an instance of Rectangle is deleted.
+to calculate the area and perimeter of the rectangle.
+and a message printed when an instance of Rectangle is delete.
 """
 
 
