@@ -32,10 +32,11 @@ def solve_nqueens(N):
 
     board = [-1] * N
     solve(board, 0)
+
+
 def main():
     if len(sys.argv) != 2:
-        print_usage()
-    
+        print_usage()    
     try:
         N = int(sys.argv[1])
     except ValueError:
