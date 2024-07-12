@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ this creates a class and is specific to the objectof dthe class."""
 
+
 def is_same_class(obj, a_class):
     """
     Returns True if the object is exactly an instance of the specified class;
