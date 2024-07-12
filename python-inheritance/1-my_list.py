@@ -1,8 +1,17 @@
 #!/usr/bin/python3
+"""A subclass of list that provides an additional method to print the list"""
 
 
 class MyList(list):
-    """ this is a simple My-list class as you can see that it officially."""
+    """
+    A subclass of list that provides an additional method to print the list
+    in sorted order.
+    """
+    
     def print_sorted(self):
-        """Prints the list, but sorted  sorted prints in alphabetical order(ascending sort)"""
+        """
+        Prints the list in ascending order.
+        Assumes all elements are of type int.
+        """
         print(sorted(self))
+
