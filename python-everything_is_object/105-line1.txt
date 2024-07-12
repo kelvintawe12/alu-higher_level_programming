@@ -1,1 +1,1 @@
-Before the execution of print("Love"), all small integer objects (from 0 to 256 for positive integers and from -5 to -1 for negative integers) are already created and still in memory due to Python's small integer optimization (NSMALLPOSINTS and NSMALLNEGINTS).
+262
