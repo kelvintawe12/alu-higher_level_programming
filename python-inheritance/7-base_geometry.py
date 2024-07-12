@@ -3,6 +3,7 @@
 This module defines a class BaseGeometry with methods for geometric operations.
 """
 
+
 class BaseGeometry:
     """
     A class representing the base geometry with geometric operations.

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a class Rectangle that inherits from BaseGeometry.
+This module defines a Rectangle class that inherits from BaseGeometry.
 """
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -8,52 +8,42 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    A class representing a rectangle inheriting from BaseGeometry.
+    Rectangle class inherits from BaseGeometry.
     """
 
     def __init__(self, width, height):
         """
-        Initializes a Rectangle instance.
+        Initializes a Rectangle instance with width and height.
 
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
 
         Raises:
-            TypeError: If width or height is not an integer.
-            ValueError: If width or height is not positive.
+            TypeError: If width or height are not integers.
+            ValueError: If width or height are not positive integers.
         """
-        super().__init__()
+        self.__width = 0
+        self.__height = 0
+        self.integer_validator('width', width)
+        self.integer_validator('height', height)
         self.__width = width
         self.__height = height
-        self.integer_validator("width", self.__width)
-        self.integer_validator("height", self.__height)
 
     def __str__(self):
         """
-        Returns a string representation of the Rectangle.
+        Returns the string representation of the rectangle.
 
         Returns:
-            str: String representation of the Rectangle in the format.
+            str: [Rectangle] <width>/<height>
         """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return f"[Rectangle] {self.__width}/{self.__height}"
 
-    @property
-    def width(self):
+    def area(self):
         """
-        Retrieves the width of the rectangle.
-
-        Returns:
-            int: The width of the rectangle.
-        """
-        return self.__width
-
-    @property
-    def height(self):
-        """
-        Retrieves the height of the rectangle.
+        Computes the area of the rectangle.
 
         Returns:
-            int: The height of the rectangle.
+            int: The area of the rectangle.
         """
-        return self.__height
+        return self.__width * self.__height
