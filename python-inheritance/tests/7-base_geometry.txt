@@ -1,4 +1,4 @@
->>> BaseGeo = _import_('7-base_geometry').BaseGeometry
+>>> BaseGeo = __import__('7-base_geometry').BaseGeometry
 
 >>> base = BaseGeo()
 
