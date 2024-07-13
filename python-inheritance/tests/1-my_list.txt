@@ -1,44 +1,76 @@
-his doctest contain one class and function, which are called
-`MyList()` and `print_sorted()`
+Step1
+=======
 
->>> MyList = _import_('1-my_list').MyList
+Importing
 
-Test MyList argument
-====================
+       >>> MyList = __import__('1-my_list').MyList
 
-`MyList()` can be initialized with no argument.
+Create an object
 
-::
+       >>> my_list = MyList()
 
-	>>> new_list = MyList()
-	>>>
+List functions
+==============
 
-it can be initialized with a list.
+Type
 
-::
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
 
-	>>> new_list = MyList([1,2,2,4])
-	>>>
+	>>> type(my_list) == MyList
+    	True
 
-it only accepts list argument.
+Print
 
-::
+	>>> print(my_list)
+	[]
 
-	>>> new_list = MyList("Hello")
-	Traceback (most recent call last):
-		...
-	TypeError: Must be a list
+is Instance
 
-	>>> ll_list = MyList({1, 2, 5})
-	Traceback (most recent call last):
-		...
-	TypeError: Must be a list
+	>>> isinstance(my_list, MyList)
+	True
 
-it only accepts one argument.
+	>>> isinstance(my_list, list)
+	True
 
-::
+Subclass
 
-	>>> l1_list = MyList([1,2,3], [2,9,5])
-	Traceback (most recent call last):
-		...
-	TypeError: Accepts one list argumen
+	>>> issubclass(MyList, list)
+    	True
+
+Step2
+=====
+
+	>>> l2 = MyList(my_list)
+	>>> l2 = [3, 7, 0, 1, 6]
+     	>>> l2.print_sorted()
+     	Traceback (most recent call last):
+     	AttributeError: 'list' object has no attribute 'print_sorted'
+
+Numbers
+=======
+
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list
+	[1, 4, 2, 3, 5]
+
+Negative Numbers
+
+     	>>> my_list.append(-1)
+     	>>> my_list.append(-4)
+     	>>> my_list += [-8]
+     	>>> my_list.append(-5)
+     	>>> my_list.print_sorted()
+     	[-8, -5, -4, -1, 1, 2, 3, 4, 5]
