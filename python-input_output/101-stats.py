@@ -17,10 +17,14 @@ try:
     for line in sys.stdin:
         line_count += 1
         parts = line.split()
-        file_size += int(parts[-1])
-        status_code = int(parts[-2])
-        if status_code in status_codes:
-            status_codes[status_code] += 1
+        try:
+            file_size += int(parts[-1])
+            status_code = int(parts[-2])
+            if status_code in status_codes:
+                status_codes[status_code] += 1
+        except (IndexError, ValueError):
+            # Skip lines with unexpected format
+            continue
 
         if line_count % 10 == 0:
             print_stats(file_size, status_codes)
