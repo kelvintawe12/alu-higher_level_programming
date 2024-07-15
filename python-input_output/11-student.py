@@ -2,7 +2,7 @@
 """
 Module: 11-student
 
-This module defines a class Student with serialization and deserialization capabilities.
+This module defines a class Student with serialization and deserialization ca.
 """
 
 
@@ -31,7 +31,7 @@ class Student:
         Retrieves a dictionary representation of a Student instance.
 
         Args:
-            attrs (list, optional): List of attribute names to retrieve. Defaults to None.
+            attrs (list, optional): List of attribute names to retrieve.
 
         Returns:
             dict: A dictionary containing the specified attributes.
@@ -46,7 +46,7 @@ class Student:
         Replaces all attributes of the Student instance.
 
         Args:
-            json (dict): A dictionary with keys as attribute names and values as attribute values.
+            json (dict): A dictionary with keys as attribute names and values.
         """
         for key, value in json.items():
             setattr(self, key, value)
