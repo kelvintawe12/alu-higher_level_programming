@@ -1,4 +1,6 @@
+-- Calculate and display the average temperature by city in descending order
+
 SELECT city, AVG(temperature) AS avg_temp
-FROM actual_table_name  -- Replace with the actual table name
+FROM temperature_data
 GROUP BY city
 ORDER BY avg_temp DESC;
