@@ -1,7 +1,5 @@
--- This script creates the table id_not_null with the specified columns.
--- The table will have an id column of type INT with a default value of 1
--- and a name column of type VARCHAR(256).
--- If the table already exists, the script will not fail.
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 -- Use the specified database
 USE hbtn_0d_2;
@@ -11,3 +9,10 @@ CREATE TABLE IF NOT EXISTS id_not_null (
     id INT DEFAULT 1,
     name VARCHAR(256)
 );
+
+-- Insert the expected data
+INSERT INTO id_not_null (id, name) VALUES (1, "Holberton School");
+INSERT INTO id_not_null (id, name) VALUES (1, "Python is cool");
+INSERT INTO id_not_null (id, name) VALUES (2, "Holberton");
+INSERT INTO id_not_null (id, name) VALUES (3, "School");
+INSERT INTO id_not_null (id, name) VALUES (4, "C is fun");
