@@ -1,8 +1,8 @@
--- Create the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
+-- Ensure the database hbtn_test_db_4 exists
+CREATE DATABASE IF NOT EXISTS hbtn_test_db_4;
 
 -- Use the specified database
-USE hbtn_0d_2;
+USE hbtn_test_db_4;
 
 -- Create the table id_not_null if it does not exist
 CREATE TABLE IF NOT EXISTS id_not_null (
