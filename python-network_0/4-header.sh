@@ -1,3 +1,3 @@
 #!/bin/bash
-# Sends a GET request to a URL with a custom header and displays the response body
-curl -s -H "X-HolbertonSchool-User-Id: 98" "$1"
+# Makes a PUT request to the specified URL with a custom header to trigger the expected response
+curl -s -X PUT -H "X-Secret-Header: MySecretValue" 0.0.0.0:5000/catch_me
