@@ -1,3 +1,3 @@
 #!/bin/bash
-# This script sends a request to 0.0.0.0:5000/catch_me and expects to receive "You got me!" in the response.
-curl -sL -X PUT -H "Origin: HolbertonSchool" 0.0.0.0:5000/catch_me
+# Make a POST request with specific data to trigger the server response
+curl -s -X POST -d "user_id=98" -H "Origin: School" 0.0.0.0:5000/catch_me
