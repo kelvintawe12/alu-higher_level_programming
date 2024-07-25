@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Usage: ./0-body_size.sh <URL>
 # Example: ./0-body_size.sh http://0.0.0.0:5000
 
