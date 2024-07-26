@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 """
-Fetches the latest 10 commits from a GitHub repo by the owner.
-Usage: ./100-github_commits.py <repo> <owner>
+the latest 10 commits from a GitHub repository by the owner.
+
+Usage:
+    ./100-github_commits.py <repo> <owner>
 """
 
 import requests
 import sys
+
 
 def fetch_commits(repo, owner):
     """
@@ -22,15 +25,19 @@ def fetch_commits(repo, owner):
     response = requests.get(url)
     
     if response.status_code != 200:
-        print(f"Error: Unable to fetch commits (status code {response.status_code})")
+        print(f"Error: Unable to fetch commits (status code "
+              f"{response.status_code})")
         return
 
     commits = response.json()
 
     for commit in commits[:10]:
-        sha = commit['sha']
-        author_name = commit['commit']['author']['name']
+        sha = commit.get('sha', 'N/A')
+        author_name = (
+            commit.get('commit', {}).get('author', {}).get('name', 'Unknown')
+        )
         print(f"{sha}: {author_name}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
