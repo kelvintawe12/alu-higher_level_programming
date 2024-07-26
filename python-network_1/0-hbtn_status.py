@@ -6,9 +6,7 @@ Fetches and displays the status of a URL.
 import urllib.request
 
 def fetch_status():
-    """
-    Fetches the content of a URL and prints its type, content, and UTF-8 content.
-    """
+#Fetches the content of a URL and prints its type, content, and UTF-8 content.
     url = 'https://alu-intranet.hbtn.io/status'
     with urllib.request.urlopen(url) as response:
         body = response.read()
