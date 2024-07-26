@@ -1,5 +1,21 @@
 #!/usr/bin/python3
-# This script sends a POST request to a given URL with an email as a parameter and displays the response body.
+"""
+This script sends a POST request to a specified URL with an email as a parameter.
+The email is sent using the 'email' variable in the request body.
+The script then prints the body of the response, decoded in UTF-8.
+
+Usage:
+    ./2-post_email.py <URL> <email>
+
+Example:
+    ./2-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
+
+Requirements:
+    - The first argument is the URL.
+    - The second argument is the email address.
+    - Only urllib and sys modules are allowed.
+    - The script must use the with statement.
+"""
 
 import urllib.parse
 import urllib.request
