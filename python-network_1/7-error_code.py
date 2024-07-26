@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-s script sends a request to a given URL and displays the body of the
+"""s script sends a request to a given URL and displays the body of the
 response. If the HTTP status code is 400 or greater, it prints an error
 message with the status code.
 
