@@ -13,8 +13,13 @@ Requirements:
 """
 
 import requests
+"""
+documenting the import statements in my python file.
+ """
 import sys
-
+"""
+documenting is hard.
+"""
 if __name__ == "__main__":
     url = sys.argv[1]
     response = requests.get(url)
