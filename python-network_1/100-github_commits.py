@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Fetches the latest 10 commits from a GitHub repo by the owner.
 Usage: ./100-github_commits.py <repo> <owner>
