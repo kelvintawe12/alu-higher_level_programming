@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-the latest 10 commits from a GitHub repository by the owner.
+Fetches the latest 10 commits from a GitHub repository by the owner.
 
 Usage:
     ./100-github_commits.py <repo> <owner>
