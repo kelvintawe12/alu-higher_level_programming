@@ -1,0 +1,19 @@
+>>> from 5-text_indentation import text_indentation
+>>> text_indentation("Hello world. How are you? I am fine: thank you.")
+Hello world.
+
+How are you?
+
+I am fine:
+
+thank you.
+>>> text_indentation("This is a test. This is only a test?")
+This is a test.
+
+This is only a test?
+>>> text_indentation("Just a single sentence")
+Just a single sentence
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
