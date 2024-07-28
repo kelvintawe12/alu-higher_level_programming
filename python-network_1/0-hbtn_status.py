@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""Displays the url fetched """
+"""Displays the URL fetched and its content."""
 
 
 import urllib.request
+import urllib.error
 
 
-if __name__ == '__main__':
-    url = 'https://intranet.hbtn.io/status'
+def fetch_url(url):
+    """Fetches the URL and prints its content."""
     headers = {'User-Agent': 'Mozilla/5.0'}
-request = urllib.request.Request(url, headers=headers)
+    request = urllib.request.Request(url, headers=headers)
+    
     try:
         with urllib.request.urlopen(request) as response:
             content = response.read()
@@ -20,3 +22,10 @@ request = urllib.request.Request(url, headers=headers)
         print("HTTPError: {}".format(e.code))
     except urllib.error.URLError as e:
         print("URLError: {}".format(e.reason))
+
+if __name__ == '__main__':
+    # Fetching from 'https://intranet.hbtn.io/status'
+    fetch_url('https://intranet.hbtn.io/status')
+    
+    # Fetching from 'http://0.0.0.0:5050/status'
+    fetch_url('http://0.0.0.0:5050/status')
