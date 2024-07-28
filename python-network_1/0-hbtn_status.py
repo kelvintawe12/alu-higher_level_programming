@@ -7,7 +7,8 @@ import urllib.request
 
 if __name__ == '__main__':
     url = 'https://intranet.hbtn.io/status'
-    request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    headers = {'User-Agent': 'Mozilla/5.0'}
+request = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(request) as response:
             content = response.read()
