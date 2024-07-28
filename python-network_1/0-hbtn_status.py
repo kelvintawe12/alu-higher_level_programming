@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Fetches and displays the status of a URL.
+""" Fetches and displays the status of a URL."""
 
 import urllib.request
 #imports the requests.
