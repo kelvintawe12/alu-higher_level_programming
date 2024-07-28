@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""nd display the status of a URL"""
+"""Displays the url fetched """
 
 
 import urllib.request
@@ -7,10 +7,7 @@ import urllib.request
 
 if __name__ == '__main__':
     url = 'https://intranet.hbtn.io/status'
-    
-    # Create a request object with a User-Agent header
     request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    
     try:
         with urllib.request.urlopen(request) as response:
             content = response.read()
