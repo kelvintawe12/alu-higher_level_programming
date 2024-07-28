@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Importing the request module""" 
+"""Docementing and importing the urllib.request"""
 
 
 import urllib.request
