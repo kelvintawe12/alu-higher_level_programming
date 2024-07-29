@@ -1,19 +1,23 @@
->>> from 5-text_indentation import text_indentation
->>> text_indentation("Hello world. How are you? I am fine: thank you.")
-Hello world.
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
-How are you?
-
-I am fine:
-
-thank you.
->>> text_indentation("This is a test. This is only a test?")
-This is a test.
-
-This is only a test?
->>> text_indentation("Just a single sentence")
-Just a single sentence
->>> text_indentation(123)
+>>> text_indentation()
 Traceback (most recent call last):
-    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
+>>> text_indentation(2)
+Traceback (most recent call last):
 TypeError: text must be a string
+
+>>> text_indentation("Holberton. School")
+Holberton.
+<BLANKLINE>
+School
