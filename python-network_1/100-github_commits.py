@@ -1,26 +1,13 @@
 #!/usr/bin/python3
 """
-Fetches the latest 10 commits from a GitHub repository by the owner.
-
-Usage:
-    ./100-github_commits.py <repo> <owner>
+Fetches the latest 10 commits from a GitHub.
 """
 
 import requests
 import sys
-
+from requests.auth import HTTPBasicAuth
 
 def fetch_commits(repo, owner):
-    """
-    Fetches the latest 10 commits from the specified repository and owner.
-
-    Args:
-        repo (str): The name of the repository.
-        owner (str): The owner of the repository.
-
-    Returns:
-        None. Prints the SHA and author name for each commit.
-    """
     url = f'https://api.github.com/repos/{owner}/{repo}/commits'
     response = requests.get(url)
     
