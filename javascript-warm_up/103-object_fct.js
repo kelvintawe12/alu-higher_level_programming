@@ -8,6 +8,11 @@ const myObject = {
   }
 };
 
+// Override the toString method to customize the function representation
+myObject.incr.toString = function () {
+  return '[Function (anonymous)]';
+};
+
 console.log({
   type: myObject.type,
   value: myObject.value
