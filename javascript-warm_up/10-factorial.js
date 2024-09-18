@@ -1,15 +1,14 @@
 #!/usr/bin/node
+
+// Define the factorial function
 function factorial(n) {
-  if (n <= 1) {
-    return 1;
-  }
+  if (isNaN(n) || n < 0) return 1;
+  if (n === 0) return 1;
   return n * factorial(n - 1);
 }
 
-const num = parseInt(process.argv[2]);
+// Convert the argument to an integer
+const arg = parseInt(process.argv[2], 10);
 
-if (isNaN(num)) {
-  console.log(1);
-} else {
-  console.log(factorial(num));
-}
+// Print the factorial of the argument
+console.log(factorial(arg));
