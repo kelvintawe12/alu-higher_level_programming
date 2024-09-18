@@ -8,16 +8,28 @@ const myObject = {
   }
 };
 
-console.log(myObject);
+console.log({
+  type: myObject.type,
+  value: myObject.value
+});
 
-// Call the incr method and log the object
 myObject.incr();
-console.log(myObject);
+console.log({
+  type: myObject.type,
+  value: myObject.value,
+  incr: myObject.incr
+});
 
-// Call the incr method again and log the object
 myObject.incr();
-console.log(myObject);
+console.log({
+  type: myObject.type,
+  value: myObject.value,
+  incr: myObject.incr
+});
 
-// Call the incr method one more time and log the object
 myObject.incr();
-console.log(myObject);
+console.log({
+  type: myObject.type,
+  value: myObject.value,
+  incr: myObject.incr
+});
