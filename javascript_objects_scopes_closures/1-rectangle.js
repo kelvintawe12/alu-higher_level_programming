@@ -1,17 +1,17 @@
 #!/usr/bin/node
-const Rectangle = require('./1-rectangle');
 
-const r1 = new Rectangle(2, 3);
-console.log(r1);
-console.log(r1.width);
-console.log(r1.height);
+function Rectangle(w, h) {
+  if (this._isValid(w) && this._isValid(h)) {
+    this.width = w;
+    this.height = h;
+  } else {
+    this.width = undefined;
+    this.height = undefined;
+  }
+}
 
-const r2 = new Rectangle(2, -3);
-console.log(r2);
-console.log(r2.width);
-console.log(r2.height);
+Rectangle.prototype._isValid = function (value) {
+  return Number.isInteger(value) && value > 0;
+};
 
-const r3 = new Rectangle(2);
-console.log(r3);
-console.log(r3.width);
-console.log(r3.height);
+module.exports = Rectangle;
