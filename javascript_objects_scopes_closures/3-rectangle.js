@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor(w, h) {
+  constructor (w, h) {
     if (this._isValid(w) && this._isValid(h)) {
       this.width = w;
       this.height = h;
@@ -10,11 +10,11 @@ class Rectangle {
     }
   }
 
-  _isValid(value) {
+  _isValid (value) {
     return Number.isInteger(value) && value > 0;
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
     }
