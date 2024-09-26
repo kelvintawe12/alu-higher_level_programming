@@ -1,17 +1,19 @@
 #!/usr/bin/node
 
-function Rectangle(w, h) {
-  if (this._isValid(w) && this._isValid(h)) {
-    this.width = w;
-    this.height = h;
-  } else {
-    this.width = undefined;
-    this.height = undefined;
+class Rectangle {
+  constructor(w, h) {
+    if (this._isValid(w) && this._isValid(h)) {
+      this.width = w;
+      this.height = h;
+    } else {
+      this.width = undefined;
+      this.height = undefined;
+    }
+  }
+
+  _isValid(value) {
+    return Number.isInteger(value) && value > 0;
   }
 }
-
-Rectangle.prototype._isValid = function (value) {
-  return Number.isInteger(value) && value > 0;
-};
 
 module.exports = Rectangle;
