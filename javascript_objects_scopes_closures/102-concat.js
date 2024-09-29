@@ -16,14 +16,16 @@ fs.readFile(sourceFile1, 'utf8', (err, data1) => {
       return;
     }
 
-    fs.writeFile(destFile, data1 + data2, (err) => {
+    const combinedData = data1 + data2;
+
+    fs.writeFile(destFile, combinedData, (err) => {
       if (err) {
         console.error(`Error writing to ${destFile}: ${err}`);
         return;
       }
 
-      // Output the contents of the destination file
-      console.log(data1 + data2);
+      // Output the combined contents once
+      process.stdout.write(combinedData); // Use write instead of log to avoid extra newline
     });
   });
 });
