@@ -21,7 +21,9 @@ fs.readFile(sourceFile1, 'utf8', (err, data1) => {
         console.error(`Error writing to ${destFile}: ${err}`);
         return;
       }
-      console.log(`Successfully concatenated ${sourceFile1} and ${sourceFile2} into ${destFile}`);
+
+      // Output the contents of the destination file
+      console.log(data1 + data2);
     });
   });
 });
