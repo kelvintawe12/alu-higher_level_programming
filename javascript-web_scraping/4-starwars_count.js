@@ -14,8 +14,12 @@ request(apiUrl, (error, response, body) => {
   const movies = data.results || [];
   let count = 0;
 
+  // Full URL for Wedge Antilles
+  const wedgeAntillesUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
+
   movies.forEach(movie => {
-    if (movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+    // Check if the character URL exists in the movie's characters array
+    if (movie.characters.includes(wedgeAntillesUrl)) {
       count++;
     }
   });
